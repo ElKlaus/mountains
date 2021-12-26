@@ -6,6 +6,8 @@
 //   background-image: url('../images/dist/bg/bg.jpg');
 //   height: 100%;
 // }
+
+/* BASE */
 * {
   box-sizing: border-box
 }
@@ -17,10 +19,6 @@ body {
   background-image: url('../images/dist/bg/bg.jpg');
   background-size: 100% auto;
   background-repeat: no-repeat;
-}
-
-.header {
-  padding-top: 64px;
 }
 
 .container-wide {
@@ -35,4 +33,128 @@ body {
 
 .space-between {
   justify-content: space-between;
+}
+
+/* HEADER */
+.header {
+  padding-top: 64px;
+}
+
+.nav-wrapper {
+  margin-bottom: 198px;
+}
+
+.logo {
+  font-family: playfair, sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.nav {
+  font-family: gilroy, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  li + li {
+    margin-left: 40px;
+  }
+
+  a {
+    color: $textcolor;
+    text-decoration: none;
+    transition: color .2s ease-in;
+    &:hover {
+      color: #FBD784;
+    }
+  }
+
+}
+
+.account {
+  font-family: gilroy, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  a {
+    text-decoration: none;
+    color: $textcolor;
+    transition: color .2s ease-in;
+    &:hover {
+      color: #FBD784;
+    }
+  }
+}
+
+/* HERO */
+.hero {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: block;
+  text-decoration: none;
+  transition: transform .5s cubic-bezier(0.970, 0.110, 0.760, 1.615);
+  &:hover {
+    transform: translateY(-5%);
+  }
+}
+
+.hero-category {
+  font-family: gilroy, sans-serif;
+  font-style: 18px;
+  font-weight: 800;
+  line-height: 1.22;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #FBD784;
+  padding-left: 104px;
+  position: relative;
+  margin-bottom: 32px;
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 72px;
+    height: 2px;
+    background-color: #FBD784;
+  }
+}
+
+.hero-title {  
+  font-family: playfair, sans-serif;
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 1.136;
+  color: $textcolor;
+  text-transform: capitalize;
+}
+
+.hero-scroll {
+  position: relative;
+  display: inline-block;
+  padding-right: 32px;
+  font-family: gilroy, sans-serif;
+  font-style: 18px;
+  font-weight: 600;
+  line-height: 1.22;
+  color: $textcolor;
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 50%;
+    width: 16px;
+    height: 24px;
+    transform: translateY(-50%);
+    background-image: url('../images/dist/icons/arrow_down.svg');
+  }
 }
