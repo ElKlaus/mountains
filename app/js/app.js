@@ -3,6 +3,11 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	// Custom JS
+	const navBatton = document.querySelector('.nav-button');
+	const mobileNav = document.querySelector('.mobile-nav');
+
+	navBatton.addEventListener('click', () => {
+
+	})
 
 })

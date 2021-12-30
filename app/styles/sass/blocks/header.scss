@@ -115,6 +115,8 @@ body {
   background: none;
   cursor: pointer;
   display: none;
+  position: relative;
+  z-index: 9;
 }
 
 .nav-button-icon {
@@ -143,6 +145,33 @@ body {
     background-color: #fff;
     width: 42px;
     height: 5px;
+  }
+}
+
+.mobile-nav {
+  position: fixed;
+  display: none;
+  // display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100%;
+  background-color: rgba(11,29,38, .8);
+  padding: 70px 70px 50px 30px;
+  .nav{
+    display: block;
+  }
+  .nav ul {
+    flex-direction: column;
+    li {
+      margin: 0;
+      margin-bottom: 25px;
+    }
+  }
+  .account {
+    display: block;
   }
 }
 
