@@ -3,11 +3,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	const navBatton = document.querySelector('.nav-button');
+	const navBtn = document.querySelector('.nav-button');
 	const mobileNav = document.querySelector('.mobile-nav');
 
-	navBatton.addEventListener('click', () => {
-
+	navBtn.addEventListener('click', () => {
+		mobileNav.classList.toggle('mobile-nav-active');
+		navBtn.classList.toggle('nav-button-close');
 	})
 
 })
